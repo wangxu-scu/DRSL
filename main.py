@@ -2,8 +2,6 @@ import torch
 # from model import TextDNN, ImageDNN, DNN, CNN
 from model import Model
 import numpy as np
-# np_seed = 1111
-# torch_seed = 2345
 
 # torch.manual_seed(torch_seed)
 # np.random.seed(np_seed)
