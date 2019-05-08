@@ -12,7 +12,7 @@ class MyCustomDataset(Dataset):
     def __init__(self, dataset='wiki_shallow', state='train'):
 
         if dataset == 'pascal_deep':
-            data_dir = './datasets/extracted_feature/'
+            data_dir = '/root/workspace/datasets/pascal/my_extracted_feature/'
             train_img = sio.loadmat(data_dir + 'train_img.mat')
             I_train = train_img['train_img']
             train_txt = sio.loadmat(data_dir + 'train_txt.mat')
@@ -30,7 +30,7 @@ class MyCustomDataset(Dataset):
 
 
         elif dataset == 'xmedianet_deep':
-            data_dir = './datasets/extracted_feature/'
+            data_dir = '/root/workspace/datasets/XMediaNet/my_extracted_feature/'
             train_img = sio.loadmat(data_dir + 'train_img.mat')
             I_train = train_img['train_img']
             train_txt = sio.loadmat(data_dir + 'train_txt.mat')
@@ -48,7 +48,7 @@ class MyCustomDataset(Dataset):
 
 
         elif dataset == 'nus_deep':
-            data_dir = './datasets/extracted_feature/'
+            data_dir = '/root/workspace/datasets/nus/my_extracted_feature/'
             train_img = sio.loadmat(data_dir + 'train_img.mat')
             I_train = train_img['train_img']
             train_txt = sio.loadmat(data_dir + 'train_txt.mat')

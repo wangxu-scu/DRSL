@@ -13,8 +13,7 @@ class ImageDNN(nn.Module):
                                         nn.ReLU(),
                                         nn.Linear(hidden_dim, output_dim),
                                         nn.BatchNorm1d(output_dim),
-                                        nn.ReLU(),
-                                        # nn.Dropout(0.5),
+                                        nn.ReLU()
                                         )
 
     def forward(self, x):
@@ -34,9 +33,7 @@ class TextDNN(nn.Module):
                                         nn.ReLU(),
                                         nn.Linear(hidden_dim, output_dim),
                                         nn.BatchNorm1d(output_dim),
-                                        # nn.Tanh(),
                                         nn.ReLU()
-                                        # nn.Dropout(0.5),
                                         )
 
     def forward(self, x):
@@ -54,13 +51,7 @@ class RelationDNN(nn.Module):
                                         nn.Linear(hidden_dim, hidden_dim),
                                         nn.BatchNorm1d(hidden_dim),
                                         nn.ReLU(),
-                                        nn.Linear(hidden_dim, output_dim),
-                                        # nn.Tanh(),
-                                        # nn.ReLU(),
-                                        # nn.LeakyReLU(0.2),
-                                        # nn.ReLU()
-                                        # nn.Sigmoid(),
-                                        # nn.Dropout(0.5),
+                                        nn.Linear(hidden_dim, output_dim)
                                         )
 
     def forward(self, x):

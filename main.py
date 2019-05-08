@@ -2,6 +2,8 @@ import torch
 # from model import TextDNN, ImageDNN, DNN, CNN
 from model import Model
 import numpy as np
+# np_seed = 1111
+# torch_seed = 2345
 
 # torch.manual_seed(torch_seed)
 # np.random.seed(np_seed)
@@ -10,7 +12,6 @@ import numpy as np
 
 from custom_dataset import MyCustomDataset
 from torch.utils.data import DataLoader
-loss_type = 'mcml'
 
 
 
@@ -43,4 +44,4 @@ model = Model(
 model.to(device)
 
 import train
-model = train.train2(model, dataloaders, device, dataset_sizes, loss_type, num_epochs=20, retreival=True)
+model = train.train2(model, dataloaders, device, dataset_sizes, num_epochs=20, retreival=True)
